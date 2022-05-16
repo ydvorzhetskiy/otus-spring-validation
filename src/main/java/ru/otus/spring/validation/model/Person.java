@@ -2,6 +2,7 @@ package ru.otus.spring.validation.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
@@ -13,6 +14,7 @@ import javax.validation.constraints.NotBlank;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Person {
 
