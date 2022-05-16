@@ -1,0 +1,13 @@
+### Get all
+
+GET http://localhost:8080/person
+Accept: *
+
+### Save
+POST http://localhost:8080/person
+Content-Type: application/json
+
+{
+  "name": "Ivan",
+  "age": 18
+}
