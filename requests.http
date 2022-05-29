@@ -3,11 +3,20 @@
 GET http://localhost:8080/person
 Accept: *
 
-### Save
+### Valid request
 POST http://localhost:8080/person
 Content-Type: application/json
 
 {
   "name": "Ivan",
   "age": 18
+}
+
+
+### Invalid request
+POST http://localhost:8080/person
+Content-Type: application/json
+
+{
+  "age": 1
 }

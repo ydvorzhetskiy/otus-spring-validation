@@ -8,5 +8,5 @@ import javax.validation.Valid;
 public interface PersonRepository extends JpaRepository<Person, Integer> {
 
     @Override
-    Person save(@Valid Person p);
+    Person save(Person p);
 }

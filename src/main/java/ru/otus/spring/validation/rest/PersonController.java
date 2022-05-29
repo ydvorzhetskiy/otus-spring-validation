@@ -7,6 +7,7 @@ import ru.otus.spring.validation.repository.PersonRepository;
 import ru.otus.spring.validation.rest.dto.PersonDto;
 import ru.otus.spring.validation.rest.mapper.PersonMapper;
 
+import javax.validation.Valid;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
@@ -28,7 +29,7 @@ public class PersonController {
 
     @PostMapping("/person")
     @ResponseStatus(HttpStatus.CREATED)
-    public PersonDto save(@RequestBody PersonDto dto) {
+    public PersonDto save(@Valid @RequestBody PersonDto dto) {
         var toSave = mapper.toModel(dto);
         var saved = repository.save(toSave);
         return mapper.toDto(saved);
